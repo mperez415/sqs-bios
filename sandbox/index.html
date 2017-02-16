@@ -22,6 +22,34 @@
             <p>Hello world! Test JavaScript hooking here!</p>
         </div>
 
+        <div class="accordion">
+          <!-- ITEM LOOP -->
+          {.repeated section items}
+          <div class="accordion-item">
+            <div class="accordion-item--title">
+              {.main-image?}
+                <div class="accordion-item--media">
+                  <div class="accordion-item--image content-fill">
+                    <img {@|image-meta} />
+                  </div>
+                </div>
+              {.end}
+              <div class="accordion-item--meta">
+                <h3>{title}</h3>
+                {excerpt}
+              </div>
+            </div>
+            <div class="accordion-item--content">
+              <!-- MAIN CONTENT -->
+              {body}
+            </div>
+            <!--end .accordion-item-content-->
+          </div>
+          <!--end .accordion-item-->
+          {.end}
+        </div>
+        <!--end .accordion-->
+
         <!-- Project Compiled JS -->
         <script src="../template/assets/js/app.js"></script>
 
