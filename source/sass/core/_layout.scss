@@ -1,0 +1,42 @@
+/******************************************************************************
+ * Layout
+ *
+ * Global mixins to use for responsive breakpoints
+*******************************************************************************/
+@mixin breakpoint($point) {
+     @if $point == mobile{
+        @media only screen and (max-width: 750px) {
+             @content;
+        }
+    }
+    @else if $point == tablet {
+         @media only screen and (min-width: 751px){
+            @content;
+        }
+    }
+    @else if $point == tablet-only {
+         @media only screen and (min-width: 751px) and (max-width: 949px){
+            @content;
+        }
+    }
+    @else if $point == phablet {
+         @media only screen and (min-width: 751px){
+            @content;
+        }
+    }
+    @else if $point == desktop {
+         @media only screen and (min-width: 950px){
+            @content;
+        }
+    }
+    @else if $point == desktop-only {
+        @media only screen and (min-width:950px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $point == desktop-xl {
+        @media only screen and (min-width:1200px) {
+            @content;
+        }
+    }
+}
