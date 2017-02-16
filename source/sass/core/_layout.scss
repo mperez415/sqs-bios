@@ -2,6 +2,8 @@
  * Layout
  *
  * Global mixins to use for responsive breakpoints
+ * See: https://responsivedesign.is/develop/getting-started-with-sass
+ * See: https://gist.github.com/pixelbacon/5703579b4c4c7c47ab52
 *******************************************************************************/
 @mixin breakpoint($point) {
      @if $point == mobile{
