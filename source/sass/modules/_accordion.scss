@@ -1,0 +1,90 @@
+/******************************************************************************
+ * Accordion
+ *
+ * Custom CSS styles that relate to accordions.
+*******************************************************************************/
+
+// Wrapper around accordion items
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+// Individual items that contain a title and content div
+.accordion-item {
+  // fill available width
+  width: 100%;
+  // add space between items
+  &:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+}
+
+// Title div displays a main image and some meta info
+.accordion-item--title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  // break items into a row and center them
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    align-items: center;
+    // add space that was previously dividing media and meta items
+    margin-bottom: 1.5em;
+  }
+}
+
+// wrapper around accordion image
+.accordion-item--media {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  margin-bottom: 1.5em;
+
+  // only take up a third of available space from tablets up
+  @include breakpoint(tablet) {
+    flex: .3333;
+    height: auto;
+    margin-bottom: 0;
+    margin-right: 1.5em;
+  }
+
+  // 1:1 aspect ratio
+  &:after {
+    display: block;
+    content: "";
+    padding-bottom: 100%;
+  }
+}
+
+// wrapper around accordion meta text
+.accordion-item--meta {
+  flex: 1;
+}
+
+.accordion-item--image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  // Stops squarespace code blocks from limiting the max width of the img
+  img {
+    max-width: none;
+  }
+}
+
+// Content displays body
+.accordion-item--content {
+  // hide by default. revealed with js
+  display: none;
+  // account for spacing
+  padding-bottom: 1.5em;
+}
