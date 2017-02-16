@@ -3,7 +3,9 @@
   "name": "squarespace-template-helper",
   "description": "A structured workflow for customizing JavaScript and CSS on Squarespace templates without Developer mode.",
   "version": "0.3.0",
-  "dependencies": {},
+  "dependencies": {
+    "hammerjs": "^2.0.8"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.13.2",
