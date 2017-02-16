@@ -9,11 +9,6 @@ import * as core from "../core";
 // probably won't need it. Recommend using core.dom module to handle node caching.
 import $ from "jquery/dist/jquery";
 
-// Hammer js
-const Hammer = require('hammerjs');
-
-// get Modernizr object
-const Modernizr = window.Modernizr;
 
 
 let $_jsElements = null;
@@ -134,17 +129,6 @@ const execElement = function ( $element ) {
       $target.on('click', function () {
         $target.next('.accordion-item--content').slideToggle(180);
       });
-
-      // prevent default tap events if device is touch enabled
-      if(Modernizr.touch) {
-        // get hammer instance of this element
-        let $thisH = new Hammer($this[0]);
-
-        // prevent default event on tap
-        $thisH.on('tap', function (e) {
-          e.preventDefault();
-        });
-      }
 
     });
 
