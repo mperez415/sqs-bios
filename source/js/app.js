@@ -12,7 +12,7 @@ require( "../sass/app.scss" );
 
 import * as core from "./core";
 import * as sqs from "./sqs";
-import example from "./modules/example";
+import Accordion from "./modules/accordion";
 
 
 /**
@@ -26,7 +26,7 @@ class App {
     constructor () {
         this.core = core;
         this.sqs = sqs;
-        this.example = example;
+        this.Accordion = Accordion;
 
         this.initModules();
     }
@@ -42,7 +42,7 @@ class App {
      *
      */
     initModules () {
-        this.example.init( this );
+        this.Accordion.init( this );
     }
 }
 
