@@ -10,6 +10,11 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 // Individual items that contain a title and content div
@@ -19,6 +24,11 @@
   // add space between items
   &:not(:last-child) {
     margin-bottom: 1.5em;
+  }
+
+  // take up half width on small screens
+  @include breakpoint(tablet) {
+    width: 50%;
   }
 }
 
