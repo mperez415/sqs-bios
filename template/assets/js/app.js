@@ -81,7 +81,7 @@
 	 * This is removed from your final JavaScript build.
 	 *
 	 */
-	__webpack_require__(/*! ../sass/app.scss */ 14);
+	__webpack_require__(/*! ../sass/app.scss */ 13);
 	
 	/**
 	 *
@@ -12740,8 +12740,7 @@
 	exports.default = Accordion;
 
 /***/ },
-/* 13 */,
-/* 14 */
+/* 13 */
 /*!******************************!*\
   !*** ./source/sass/app.scss ***!
   \******************************/
